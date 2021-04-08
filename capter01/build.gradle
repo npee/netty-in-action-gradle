@@ -1,6 +1,4 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
 
 group 'io.npee'
 version '1.0-SNAPSHOT'

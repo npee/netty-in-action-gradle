@@ -1,6 +1,4 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
 
 group 'io.npee'
 version '1.0-SNAPSHOT'
@@ -13,4 +11,28 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
     implementation group: 'io.netty', name: 'netty-all', version: '4.1.58.Final'
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    group 'io.npee'
+    version '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+
+        implementation group: 'io.netty', name: 'netty-all', version: '4.1.58.Final'
+
+        // dependencies for Custom log
+        implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+        implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.30'
+        // ?? when I selected ver 0.19.0 of jcabi's, gradle got ver '1.8.0 beta' of slf4j-api strictly.
+        implementation group: 'com.jcabi', name: 'jcabi-log', version: '0.18.0'
+    }
+
 }
