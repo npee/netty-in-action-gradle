@@ -1,2 +1,2 @@
 rootProject.name = 'netty-in-action-gradle'
-include 'capter01'
+include 'chapter01'
