@@ -9,8 +9,8 @@ public class Main {
     private static Logger log = LoggerFactory.getLogger(chapter01.Main.class);
 
     public static void main(String[] args) throws IOException {
-        BlockingIOExample chapter01_1 = new BlockingIOExample();
-        chapter01_1.serve(8888);
+        BlockingIOExample blockingIOExample = new BlockingIOExample();
+        blockingIOExample.serve(8888);
     }
 }
 
